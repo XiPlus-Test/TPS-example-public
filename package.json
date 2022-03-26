@@ -1,7 +1,7 @@
 {
   "name": "test-repo",
   "dependencies": {
-    "minimist": "0.0.8"
+    "minimist": "1.2.6"
   },
   "devDependencies": {}
 }
