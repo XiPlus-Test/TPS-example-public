@@ -1,0 +1,19 @@
+@subtask samples
+manual sample-01.in
+manual sample-02.in
+
+@subtask a0
+gen task2 qutxm
+gen task2 iqsds
+gen task2 qsvsu
+
+@subtask 1e4
+gen norm 0 10000 csizh
+gen norm 0 10000 xtqcy
+gen norm 0 10000 ilhti
+
+@subtask all
+manual all-01.in
+gen norm -1000000000 1000000000 jvnyj
+gen norm -1000000000 1000000000 mtkbd
+gen norm -1000000000 1000000000 cihky

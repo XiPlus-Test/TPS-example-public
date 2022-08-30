@@ -1,1 +1,9 @@
-node_modules/
+cover.aux
+cover.fdb_latexmk
+cover.fls
+cover.log
+cover.pdf
+template.aux
+template.fdb_latexmk
+template.fls
+template.log
