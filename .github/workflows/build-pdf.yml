@@ -172,8 +172,10 @@ jobs:
           path: ${{ runner.temp }}/flags/
 
       - name: Install dependencies
-        if: ${{ startsWith(runner.name, 'GitHub Actions') }}
+        if: ${{ startsWith(runner.name, 'GitHub Actions') || runner.name == 'Hosted Agent' }}
         run: |
+          echo "$RUNNER_CONTEXT"
+
           bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
 
           wget https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
