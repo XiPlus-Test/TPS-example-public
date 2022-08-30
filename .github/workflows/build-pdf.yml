@@ -171,22 +171,16 @@ jobs:
           name: flags
           path: ${{ runner.temp }}/flags/
 
-      - name: Install tps
+      - name: Install dependencies
+        if: ${{ startsWith(runner.name, 'GitHub Actions') }}
         run: |
-          git clone https://github.com/ioi-2017/tps.git
-          cd tps && sudo ./install-tps.sh
+          bash -c "$(curl -fsSL https://raw.githubusercontent.com/ioi-2017/tps/master/online-installer/install.sh)"
 
-      - name: Install pandoc
-        run: |
           wget https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
           sudo dpkg -i pandoc-2.10.1-1-amd64.deb
 
-      - name: Install xetex
-        run: |
           sudo apt-get install texlive-xetex
 
-      - name: Install fonts
-        run: |
           sudo mkdir -p /usr/share/fonts/opentype/noto
           wget -nv https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJK-Regular.ttc.zip
           unzip NotoSansCJK-Regular.ttc.zip -d NotoSansCJK-Regular
@@ -199,8 +193,6 @@ jobs:
           ls -al /usr/share/fonts/opentype/noto
           sudo fc-cache -f -v
 
-      - name: Install pdfunite
-        run: |
           sudo apt-get install poppler-utils
 
       - name: Check environment
