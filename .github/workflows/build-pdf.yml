@@ -171,9 +171,10 @@ jobs:
           name: flags
           path: ${{ runner.temp }}/flags/
 
-      - name: Env
-        run: |
-          echo "$RUNNER_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
+        run: echo "$RUNNER_CONTEXT"
 
       - name: Install dependencies
         if: ${{ startsWith(runner.name, 'GitHub Actions') || runner.name == 'Hosted Agent' }}
