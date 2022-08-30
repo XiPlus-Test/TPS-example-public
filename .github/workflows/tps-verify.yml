@@ -20,13 +20,18 @@ jobs:
     outputs:
       matrix: ${{ steps.problem-list.outputs.matrix }}
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Read problems
-      id: problem-list
-      run: |
-        problems=$(cat .problems.json)
-        echo "::set-output name=matrix::$problems"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+
+      - name: Read problems
+        id: problem-list
+        run: |
+          problems=$(cat .problems.json)
+          echo "::set-output name=matrix::$problems"
 
   verify:
     needs: [problem-list]
