@@ -57,6 +57,6 @@ jobs:
 
       - name: Verify
         if: ${{ (github.event_name == 'push' && steps.changes.outputs.any == 'true') || (github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, matrix.problem)) }}
-        uses: TNFSH-Programming-Contest/tps-actions/tree/main/.github/actions/verify@main
+        uses: TNFSH-Programming-Contest/tps-actions/.github/actions/verify@main
         with:
           path: p${{ matrix.problem }}
