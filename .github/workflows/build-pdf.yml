@@ -28,3 +28,4 @@ jobs:
     with:
       problems: ${{ github.event.inputs.problems }}
       merge: ${{ fromJson(github.event.inputs.merge) }}
+      runs-on: self-hosted
