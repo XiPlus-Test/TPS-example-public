@@ -45,8 +45,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Make flags dir
         run: |
@@ -102,6 +100,11 @@ jobs:
         run: |
           echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/all/${{ matrix.problem }}
 
+      - name: Set merge flag
+        if: ${{ contains(github.event.head_commit.message, '[merge pdf]') }}
+        run: |
+          echo "+" > $RUNNER_TEMP/flags/build-pdf/+
+
       - name: Upload flags
         uses: actions/upload-artifact@v2
         with:
@@ -118,6 +121,8 @@ jobs:
         problem: ${{ fromJson(needs.problem-list.outputs.matrix) }}
 
     steps:
+      - uses: actions/checkout@v3
+
       - name: Make flags dir
         run: |
           mkdir -p $RUNNER_TEMP/flags/build-pdf/
@@ -135,6 +140,11 @@ jobs:
         if: ${{ hashFiles(format('p{0}/statement/index.pdf', matrix.problem)) != '' }}
         run: |
           echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/all/${{ matrix.problem }}
+
+      - name: Set merge flag
+        if: ${{ contains(github.event.inputs.target, '+') }}
+        run: |
+          echo "+" > $RUNNER_TEMP/flags/build-pdf/+
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
@@ -156,11 +166,6 @@ jobs:
         with:
           name: flags
           path: ${{ runner.temp }}/flags/
-
-      - name: Set merge flag
-        if: ${{ github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, '+') }}
-        run: |
-          echo "+" > $RUNNER_TEMP/flags/build-pdf/+
 
       - name: Check target
         id: check-post
