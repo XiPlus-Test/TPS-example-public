@@ -58,11 +58,4 @@ jobs:
       - name: Verify
         if: ${{ (github.event_name == 'push' && steps.changes.outputs.any == 'true') || (github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, matrix.problem)) }}
         working-directory: p${{ matrix.problem }}
-        run: |
-          set +e
-
-          tps verify | tee verify-result.txt
-          grep "ERROR:" verify-result.txt >/dev/null
-          if [ $? -eq 0 ]; then
-            exit 1
-          fi
+        uses: TNFSH-Programming-Contest/tps-actions/tree/main/.github/actions/verify@main
