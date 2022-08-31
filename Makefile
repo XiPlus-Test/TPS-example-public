@@ -15,4 +15,7 @@ import-pD:
 import-pE:
 	cmsImportTask ./pE/ -u $(if $(s), , --no-statement)
 
+import-pF:
+	cmsImportTask ./pF/ -u $(if $(s), , --no-statement)
+
 # NEWPROBELM
