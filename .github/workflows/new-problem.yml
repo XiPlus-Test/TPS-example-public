@@ -10,4 +10,4 @@ jobs:
   run:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/new-problem.yml@main
     with:
-      count: ${{ github.event.inputs.count }}
+      count: ${{ fromJson(github.event.inputs.count) }}
