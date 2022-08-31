@@ -50,8 +50,10 @@ jobs:
 
       - name: Make flags dir
         run: |
-          mkdir -p $RUNNER_TEMP/flags/
-          touch $RUNNER_TEMP/flags/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-pdf/
+          touch $RUNNER_TEMP/flags/build-pdf/.keep
+          mkdir -p $RUNNER_TEMP/flags/all/
+          touch $RUNNER_TEMP/flags/all/.keep
 
       - uses: dorny/paths-filter@v2
         id: changes
@@ -70,7 +72,7 @@ jobs:
       - name: Set problem flag
         if: steps.changes.outputs.pdf == 'true' || (matrix.problem == 'A' && steps.changes.outputs.cover == 'true')
         run: |
-          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/build-pdf/${{ matrix.problem }}
 
       - name: Check changes in config
         run: |
@@ -78,14 +80,14 @@ jobs:
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/problem.json | grep '"contest_name"\|"problem_label"\|"name"\|"title"\|"memory_limit"\|"time_limit"'
           if [ $? -eq 0 ]; then
-            echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
+            echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/build-pdf/${{ matrix.problem }}
           else
             echo "No changes in problem.json for pdf";
           fi
 
           git diff ${{ github.event.before }}..HEAD -U0 p${{ matrix.problem }}/subtasks.json | grep '"index"\|"score"\|"text"'
           if [ $? -eq 0 ]; then
-            echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
+            echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/build-pdf/${{ matrix.problem }}
           else
             echo "No changes in subtasks.json for pdf";
           fi
@@ -93,7 +95,12 @@ jobs:
       - name: Remove flags if auto build disabled
         if: hashFiles(format('p{0}/statement/DISABLE_AUTO_BUILD', matrix.problem)) != ''
         run: |
-          rm -f $RUNNER_TEMP/flags/${{ matrix.problem }}
+          rm -f $RUNNER_TEMP/flags/build-pdf/${{ matrix.problem }}
+
+      - name: Set all flag
+        if: ${{ hashFiles(format('{0}/flags/all/{1}', runner.temp, matrix.problem)) != '' || hashFiles(format(p{0}/statement/index.pdf', matrix.problem)) != '' }}
+        run: |
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/all/${{ matrix.problem }}
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
@@ -113,14 +120,21 @@ jobs:
     steps:
       - name: Make flags dir
         run: |
-          echo $RUNNER_TEMP/flags/
-          mkdir -p $RUNNER_TEMP/flags/
-          touch $RUNNER_TEMP/flags/.keep
+          mkdir -p $RUNNER_TEMP/flags/build-pdf/
+          touch $RUNNER_TEMP/flags/build-pdf/.keep
+          mkdir -p $RUNNER_TEMP/flags/all/
+          touch $RUNNER_TEMP/flags/all/.keep
 
       - name: Set problem flag
         if: contains(github.event.inputs.target, matrix.problem)
         run: |
-          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/${{ matrix.problem }}
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/build-pdf/${{ matrix.problem }}
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/all/${{ matrix.problem }}
+
+      - name: Set all flag
+        if: ${{ hashFiles(format(p{0}/statement/index.pdf', matrix.problem)) != '' }}
+        run: |
+          echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/all/${{ matrix.problem }}
 
       - name: Upload flags
         uses: actions/upload-artifact@v2
@@ -146,11 +160,11 @@ jobs:
       - name: Set merge flag
         if: ${{ github.event_name == 'workflow_dispatch' && contains(github.event.inputs.target, '+') }}
         run: |
-          echo "+" > $RUNNER_TEMP/flags/+
+          echo "+" > $RUNNER_TEMP/flags/build-pdf/+
 
       - name: Check target
         id: check-post
-        working-directory: ${{ runner.temp }}/flags/
+        working-directory: ${{ runner.temp }}/flags/build-pdf/
         run: |
           probs=$(ls -m .)
           echo $probs
@@ -217,7 +231,7 @@ jobs:
 
       - name: Build pdf
         run: |
-          for prob in $(cat $RUNNER_TEMP/flags/*); do
+          for prob in $(cat $RUNNER_TEMP/flags/build-pdf/*); do
             cd p${prob} && tps statement && cd ..
           done
 
@@ -231,8 +245,15 @@ jobs:
       - name: Merge pdfs
         if: contains(needs.check-post.outputs.problems, '+')
         run: |
+          MERGECMD="pdfunite "
+          for prob in $(cat $RUNNER_TEMP/flags/all/*); do
+            MERGECMD="$MERGECMD p${prob}/statement/index.pdf"
+          done
+          MERGECMD="$MERGECMD pA/attachments/problems.pdf"
+
+          echo $MERGECMD
           mkdir -p pA/attachments
-          pdfunite pA/statement/index.pdf `# NEWPROBLEM` pA/attachments/problems.pdf
+          $MERGECMD
           git add pA/attachments/problems.pdf
 
       - name: Check diff
@@ -244,7 +265,7 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git status
-          for prob in $(cat $RUNNER_TEMP/flags/*); do
+          for prob in $(cat $RUNNER_TEMP/flags/build-pdf/*); do
             git add p${prob}/statement/index.pdf
           done
           git pull

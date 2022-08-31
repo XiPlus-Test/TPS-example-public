@@ -261,7 +261,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
 
       - name: Install dependencies
-        if: ${{ startsWith(runner.name, 'GitHub Actions') }}
+        if: ${{ runner.name == 'Hosted Agent' || startsWith(runner.name, 'GitHub Actions') }}
         run: |
           sudo apt-get install dos2unix python3-setuptools
           sudo python3 -m pip install psutil
