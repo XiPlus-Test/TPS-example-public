@@ -12,4 +12,7 @@ import-pC:
 import-pD:
 	cmsImportTask ./pD/ -u $(if $(s), , --no-statement)
 
+import-pE:
+	cmsImportTask ./pE/ -u $(if $(s), , --no-statement)
+
 # NEWPROBELM
