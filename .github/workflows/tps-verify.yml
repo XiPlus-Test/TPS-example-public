@@ -13,12 +13,7 @@ on:
         default: ''
 
 jobs:
-  run-push:
-    if: github.event_name == 'push'
-    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/tps-verify.yml@main
-
-  run-dispatch:
-    if: github.event_name == 'workflow_dispatch'
+  run:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/tps-verify.yml@main
     with:
       problems: ${{ github.event.inputs.target }}
