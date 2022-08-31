@@ -12,6 +12,7 @@
 | D | [statement](pD/statement) [md](pD/statement/index.md) [pdf](pD/statement/index.pdf) | [gen](pD/gen) | [validator](pD/validator) | [solution](pD/solution) [check](pD/solutions-check.txt) | [tests](pD/tests) | [problem](pD/problem.json) [solutions](pD/solutions.json) [subtasks](pD/subtasks.json) |
 | E | [statement](pE/statement) [md](pE/statement/index.md) [pdf](pE/statement/index.pdf) | [gen](pE/gen) | [validator](pE/validator) | [solution](pE/solution) [check](pE/solutions-check.txt) | [tests](pE/tests) | [problem](pE/problem.json) [solutions](pE/solutions.json) [subtasks](pE/subtasks.json) |
 | F | [statement](pF/statement) [md](pF/statement/index.md) [pdf](pF/statement/index.pdf) | [gen](pF/gen) | [validator](pF/validator) | [solution](pF/solution) [check](pF/solutions-check.txt) | [tests](pF/tests) | [problem](pF/problem.json) [solutions](pF/solutions.json) [subtasks](pF/subtasks.json) |
+| G | [statement](pG/statement) [md](pG/statement/index.md) [pdf](pG/statement/index.pdf) | [gen](pG/gen) | [validator](pG/validator) | [solution](pG/solution) [check](pG/solutions-check.txt) | [tests](pG/tests) | [problem](pG/problem.json) [solutions](pG/solutions.json) [subtasks](pG/subtasks.json) |
 <!-- new problem -->
 
 ## Subtasks
