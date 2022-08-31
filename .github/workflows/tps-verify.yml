@@ -10,7 +10,6 @@ on:
     inputs:
       target:
         description: 'Problem labels to verify'
-        default: ''
 
 jobs:
   run:
