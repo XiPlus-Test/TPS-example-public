@@ -1,13 +1,2 @@
 # test_name gen_line_number gen_line_content
-0-01	  2	manual sample-01.in
-0-02	  3	manual sample-02.in
-1-01	  6	gen task2 qutxm
-1-02	  7	gen task2 iqsds
-1-03	  8	gen task2 qsvsu
-2-01	 11	gen norm 0 10000 csizh
-2-02	 12	gen norm 0 10000 xtqcy
-2-03	 13	gen norm 0 10000 ilhti
-3-01	 16	manual all-01.in
-3-02	 17	gen norm -1000000000 1000000000 jvnyj
-3-03	 18	gen norm -1000000000 1000000000 mtkbd
-3-04	 19	gen norm -1000000000 1000000000 cihky
+0-01	  2	manual all-01.in

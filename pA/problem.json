@@ -1,8 +1,8 @@
 {
-	"contest_name": "CMS環境測試題目通用版 v1.13",
+	"contest_name": "CMS環境測試題目通用版 v1.1",
 	"problem_label": "A",
-	"name": "Arithmetic",
-	"title": "四則運算",
+	"name": "HelloWorld",
+	"title": "Hello, World!",
 	"memory_limit": 512,
 	"time_limit": 1.0,
 	"type": "Batch",
