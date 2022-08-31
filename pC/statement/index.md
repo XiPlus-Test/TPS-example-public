@@ -6,7 +6,7 @@
 \caption{TODO: 圖片說明}
 \end{figure} -->
 
-TODO: 題目敘述2
+TODO: 題目敘述
 
 \clearpage
 
