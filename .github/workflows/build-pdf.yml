@@ -96,7 +96,7 @@ jobs:
           rm -f $RUNNER_TEMP/flags/build-pdf/${{ matrix.problem }}
 
       - name: Set all flag
-        if: ${{ hashFiles(format('{0}/flags/all/{1}', runner.temp, matrix.problem)) != '' || hashFiles(format('p{0}/statement/index.pdf', matrix.problem)) != '' }}
+        if: ${{ hashFiles(format('{0}/flags/build-pdf/{1}', runner.temp, matrix.problem)) != '' || hashFiles(format('p{0}/statement/index.pdf', matrix.problem)) != '' }}
         run: |
           echo "${{ matrix.problem }}" > $RUNNER_TEMP/flags/all/${{ matrix.problem }}
 
