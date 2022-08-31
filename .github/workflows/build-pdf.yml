@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
     inputs:
       problems:
-        description: 'Problem labels to build (A-Z), "+" to merge pdfs'
+        description: 'Problem labels to build (A-Z)'
         default: ''
       merge:
         description: 'Merge pdfs?'
@@ -24,7 +24,7 @@ on:
 
 jobs:
   run:
-    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/build-tests.yml@main
+    uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/build-pdf.yml@main
     with:
       problems: ${{ github.event.inputs.problems }}
       merge: ${{ fromJson(github.event.inputs.merge) }}
