@@ -20,6 +20,7 @@ on:
         default: ''
       merge:
         description: 'Merge pdfs?'
+        default: false
         type: boolean
 
 jobs:
