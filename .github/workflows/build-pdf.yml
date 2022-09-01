@@ -28,4 +28,4 @@ jobs:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/build-pdf.yml@main
     with:
       problems: ${{ inputs.problems }}
-      merge: ${{ inputs.merge }}
+      merge: ${{ inputs.merge && fromJson(inputs.merge) || false }}
