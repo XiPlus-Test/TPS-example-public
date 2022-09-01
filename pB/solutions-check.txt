@@ -1,18 +1,18 @@
 ac.cpp
 solution            compile[OK]
-0-01                sol[OK]    0.015     check[OK]        0  [Wrong Answer]        
-0-02                sol[OK]    0.014     check[OK]        1  [Correct]             
+0-01                sol[OK]    0.014     check[OK]        1  [Correct]             
+0-02                sol[OK]    0.016     check[OK]        1  [Correct]             
 1-01                sol[OK]    0.014     check[OK]        1  [Correct]             
-1-02                sol[OK]    0.013     check[OK]        1  [Correct]             
-1-03                sol[OK]    0.013     check[OK]        1  [Correct]             
-1-04                sol[OK]    0.013     check[OK]        1  [Correct]             
-1-05                sol[OK]    0.013     check[OK]        1  [Correct]             
-2-01                sol[OK]    0.014     check[OK]        1  [Correct]             
-2-02                sol[OK]    0.013     check[OK]        1  [Correct]             
-2-03                sol[OK]    0.013     check[OK]        1  [Correct]             
-2-04                sol[OK]    0.013     check[OK]        1  [Correct]             
-2-05                sol[OK]    0.013     check[OK]        1  [Correct]             
-samples             [2/2 tests]    [Wrong Answer]        [0/0 pts]      [expected: model_solution]        0-01
+1-02                sol[OK]    0.015     check[OK]        1  [Correct]             
+1-03                sol[OK]    0.014     check[OK]        1  [Correct]             
+1-04                sol[OK]    0.015     check[OK]        1  [Correct]             
+1-05                sol[OK]    0.015     check[OK]        1  [Correct]             
+2-01                sol[OK]    0.015     check[OK]        1  [Correct]             
+2-02                sol[OK]    0.016     check[OK]        1  [Correct]             
+2-03                sol[OK]    0.015     check[OK]        1  [Correct]             
+2-04                sol[OK]    0.015     check[OK]        1  [Correct]             
+2-05                sol[OK]    0.014     check[OK]        1  [Correct]             
+samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
 small               [5/5 tests]    [Correct]             [86/86 pts]    [match with expected]             1-01
 all                 [5/5 tests]    [Correct]             [14/14 pts]    [match with expected]             2-01
 
@@ -23,19 +23,19 @@ Finished.
 
 wa.cpp
 solution            compile[OK]
-0-01                sol[OK]    0.014     check[OK]        0  [Wrong Answer]        
-0-02                sol[OK]    0.013     check[OK]        1  [Correct]             
-1-01                sol[OK]    0.014     check[OK]        1  [Correct]             
-1-02                sol[OK]    0.013     check[OK]        1  [Correct]             
-1-03                sol[OK]    0.014     check[OK]        1  [Correct]             
-1-04                sol[OK]    0.013     check[OK]        1  [Correct]             
+0-01                sol[OK]    0.015     check[OK]        1  [Correct]             
+0-02                sol[OK]    0.015     check[OK]        1  [Correct]             
+1-01                sol[OK]    0.015     check[OK]        1  [Correct]             
+1-02                sol[OK]    0.015     check[OK]        1  [Correct]             
+1-03                sol[OK]    0.015     check[OK]        1  [Correct]             
+1-04                sol[OK]    0.014     check[OK]        1  [Correct]             
 1-05                sol[OK]    0.014     check[OK]        1  [Correct]             
 2-01                sol[OK]    0.014     check[OK]        0  [Wrong Answer]        
-2-02                sol[OK]    0.013     check[OK]        0  [Wrong Answer]        
-2-03                sol[OK]    0.013     check[OK]        0  [Wrong Answer]        
-2-04                sol[OK]    0.014     check[OK]        0  [Wrong Answer]        
-2-05                sol[OK]    0.013     check[OK]        0  [Wrong Answer]        
-samples             [2/2 tests]    [Wrong Answer]        [0/0 pts]      [expected: correct]               0-01
+2-02                sol[OK]    0.016     check[OK]        0  [Wrong Answer]        
+2-03                sol[OK]    0.016     check[OK]        0  [Wrong Answer]        
+2-04                sol[OK]    0.023     check[OK]        0  [Wrong Answer]        
+2-05                sol[OK]    0.020     check[OK]        0  [Wrong Answer]        
+samples             [2/2 tests]    [Correct]             [0/0 pts]      [match with expected]             0-01
 small               [5/5 tests]    [Correct]             [86/86 pts]    [match with expected]             1-01
 all                 [5/5 tests]    [Wrong Answer]        [0/14 pts]     [match with expected]             2-01
 
