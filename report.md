@@ -1,6 +1,7 @@
 # Report
 ## Progress
 <!-- progress start -->
+| | A | B | C |
 | --- | --- | --- | --- |
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) |
