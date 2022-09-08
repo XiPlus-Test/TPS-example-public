@@ -8,16 +8,16 @@ on:
 
 jobs:
   test:
-    run: |
+    - run: |
       echo "::notice title=Notice::test messages"
 
-    run: |
+    - run: |
       echo "::warning title=Warning::test messages"
 
-    run: |
+    - run: |
       echo "::error title=Error::test messages"
 
-    run: |
+    - run: |
       echo "1" >> test.txt
       echo "2" >> test.txt
       echo "3" >> test.txt
