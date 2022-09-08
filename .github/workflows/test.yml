@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      problems:
+        description: 'Problem labels to verify'
+
+jobs:
+  test:
+    run: |
+      echo "::notice title=Notice::test messages"
+
+    run: |
+      echo "::warning title=Warning::test messages"
+
+    run: |
+      echo "::error title=Error::test messages"
+
+    run: |
+      echo "1" >> test.txt
+      echo "2" >> test.txt
+      echo "3" >> test.txt
+      msg=$(cat test.txt)
+      echo "::error title=Error::$msg"
