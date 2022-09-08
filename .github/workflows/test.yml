@@ -21,4 +21,5 @@ jobs:
           echo "2" >> test.txt
           echo "3" >> test.txt
           msg=$(cat test.txt)
+          msg=$(msg//$'\n'/'%0A')
           echo "::error title=Error::$msg"
