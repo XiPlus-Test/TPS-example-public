@@ -1,7 +1,6 @@
-
-#Progress
+# Report
+## Progress
 <!-- progress start -->
-| | A | B | C |
 | --- | --- | --- | --- |
 | contest_name |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) |
 | problem_label |  [:white_check_mark:](pA/problem.json) | [:white_check_mark:](pB/problem.json) | [:white_check_mark:](pC/problem.json) |
@@ -17,7 +16,7 @@
 | statement | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) |
 <!-- progress end -->
 
-#Subtasks
+## Subtasks
 <!-- subtasks start -->
 | | 1 | 2 |
 | --- | --- | --- |
