@@ -1,0 +1,21 @@
+{
+    "global_validators": [
+        "validator.cpp"
+    ],
+    "subtasks": {
+        "small": {
+            "index": 1,
+            "score": 86,
+            "text": "$-87 \\leq X_1, Y_1, X_2, Y_2 \\leq 87$",
+            "validators": [
+                "validator-small.cpp"
+            ]
+        },
+        "all": {
+            "index": 2,
+            "score": 14,
+            "text": "無額外限制",
+            "validators": []
+        }
+    }
+}
