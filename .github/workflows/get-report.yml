@@ -11,5 +11,3 @@ on:
 jobs:
   run:
     uses: TNFSH-Programming-Contest/tps-actions/.github/workflows/get-report.yml@report
-    with:
-      report-path: test.md
