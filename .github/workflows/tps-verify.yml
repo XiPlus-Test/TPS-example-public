@@ -13,6 +13,6 @@ on:
 
 jobs:
   run:
-    uses: XiPlus-Test/tps-actions/.github/workflows/tps-verify.yml@main
+    uses: XiPlus-Test/tps-actions-test/.github/workflows/tps-verify.yml@main
     with:
       problems: ${{ github.event.inputs.problems }}

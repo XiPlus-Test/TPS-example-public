@@ -24,7 +24,7 @@ on:
 
 jobs:
   run:
-    uses: XiPlus-Test/tps-actions/.github/workflows/build-tests.yml@main
+    uses: XiPlus-Test/tps-actions-test/.github/workflows/build-tests.yml@main
     with:
       input: ${{ github.event.inputs.input }}
       output: ${{ github.event.inputs.output }}

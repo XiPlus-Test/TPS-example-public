@@ -8,6 +8,6 @@ on:
 
 jobs:
   run:
-    uses: XiPlus-Test/tps-actions/.github/workflows/new-problem.yml@main
+    uses: XiPlus-Test/tps-actions-test/.github/workflows/new-problem.yml@main
     with:
       count: ${{ fromJson(github.event.inputs.count) }}
