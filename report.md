@@ -13,8 +13,8 @@
 | gen | [:white_check_mark:](pA/gen) | [:white_check_mark:](pB/gen) | [:white_check_mark:](pC/gen) |
 | solution | [:white_check_mark:](pA/solution) | [:white_check_mark:](pB/solution) | [:white_check_mark:](pC/solution) |
 | validator | [:white_check_mark:](pA/validator) | [:white_check_mark:](pB/validator) | [:white_check_mark:](pC/validator) |
-| tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:x:](pC/tests) |
 | subtasks.json<br>global_validators |  [:white_check_mark:](pA/subtasks.json) | [:white_check_mark:](pB/subtasks.json) | [:white_check_mark:](pC/subtasks.json) |
+| tests | [:white_check_mark:](pA/tests) | [:white_check_mark:](pB/tests) | [:x:](pC/tests) |
 | statement | [:white_check_mark:](pA/statement/index.md) | [:white_check_mark:](pB/statement/index.md) | [:white_check_mark:](pC/statement/index.md) |
 <!-- progress end -->
 
@@ -26,3 +26,12 @@
 | B | 86<br>$-87 \leq X_1, Y_1, X_2, Y_2 \leq 87$ | 14<br>無額外限制 |
 | C | 86<br>$-87 \leq X_1, Y_1, X_2, Y_2 \leq 87$ | 14<br>無額外限制 |
 <!-- subtasks end -->
+
+## Scores
+<!-- scores start -->
+| score | count | groups |
+| --- | --- | --- |
+| 14 | 2 | (B2) (C2) |
+| 86 | 2 | (B1) (C1) |
+| 114 | 2 | (B2, C2, B1) (B2, C2, C1) |
+<!-- scores end -->
