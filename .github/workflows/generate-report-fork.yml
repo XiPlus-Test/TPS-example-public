@@ -5,4 +5,4 @@ on:
 
 jobs:
   run:
-    uses: XiPlus-Test/tps-actions/.github/workflows/generate-report.yml@main
+    uses: xiplus-test/tps-actions/.github/workflows/generate-report.yml@main
