@@ -9,6 +9,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | A | [statement](pA/statement) [md](pA/statement/index.md) [pdf](pA/statement/index.pdf) | [gen](pA/gen) | [validator](pA/validator) | [solution](pA/solution) [check](pA/solutions-check.txt) | [tests](pA/tests) | [problem](pA/problem.json) [solutions](pA/solutions.json) [subtasks](pA/subtasks.json) |
 | B | [statement](pB/statement) [md](pB/statement/index.md) [pdf](pB/statement/index.pdf) | [gen](pB/gen) | [validator](pB/validator) | [solution](pB/solution) [check](pB/solutions-check.txt) | [tests](pB/tests) | [problem](pB/problem.json) [solutions](pB/solutions.json) [subtasks](pB/subtasks.json) |
+
 <!-- new problem -->
 
 ## Subtasks
@@ -18,4 +19,5 @@
 | A | 100<br>無額外限制 |
 | B | 86<br>$-87 \leq X_1, Y_1, X_2, Y_2 \leq 87$ | 14<br>無額外限制 |
 | C | 86<br>$-87 \leq X_1, Y_1, X_2, Y_2 \leq 87$ | 14<br>無額外限制 |
+
 <!-- subtasks end -->
