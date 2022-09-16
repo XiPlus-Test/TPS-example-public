@@ -1,8 +1,0 @@
-name: Generate report fork
-
-on:
-  workflow_dispatch:
-
-jobs:
-  run:
-    uses: xiplus-test/tps-actions/.github/workflows/generate-report.yml@main
