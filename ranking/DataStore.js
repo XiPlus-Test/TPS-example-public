@@ -721,7 +721,7 @@ var DataStore = new function () {
             delete old_user["rank"];
         });
 
-        self.create_event_source();
+        // self.create_event_source();
         self.init_selections();
     };
 
