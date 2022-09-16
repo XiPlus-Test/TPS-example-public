@@ -55,7 +55,7 @@ var Config = new function () {
     };
 
     self.get_face_url = function (u_key) {
-        return "faces/" + u_key;
+        return "img/face.png"; // "faces/" + u_key;
     };
 
     self.get_submissions_url = function (u_key) {
