@@ -6,4 +6,7 @@ import-pA:
 import-pB:
 	cmsImportTask ./pB/ -u $(if $(s), , --no-statement)
 
+import-pD:
+	cmsImportTask ./pD/ -u $(if $(s), , --no-statement)
+
 # NEWPROBELM
