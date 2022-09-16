@@ -12,13 +12,3 @@
 | D | [statement](pD/statement) [md](pD/statement/index.md) [pdf](pD/statement/index.pdf) | [gen](pD/gen) | [validator](pD/validator) | [solution](pD/solution) [check](pD/solutions-check.txt) | [tests](pD/tests) | [problem](pD/problem.json) [solutions](pD/solutions.json) [subtasks](pD/subtasks.json) |
 
 <!-- new problem -->
-
-## Subtasks
-<!-- subtasks start -->
-
-| | 1 | 2 |
-| --- | --- | --- |
-| A | 100<br>無額外限制 |
-| B | 86<br>$-87 \leq X_1, Y_1, X_2, Y_2 \leq 87$ | 14<br>無額外限制 |
-| C | 86<br>$-87 \leq X_1, Y_1, X_2, Y_2 \leq 87$ | 14<br>無額外限制 |
-<!-- subtasks end -->
