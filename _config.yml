@@ -1,3 +1,9 @@
 exclude:
-  - "**/tests/"
   - pA/scripts/
+  - pA/tests/
+  - pB/scripts/
+  - pB/tests/
+  - pC/scripts/
+  - pC/tests/
+  - pD/scripts/
+  - pD/tests/
