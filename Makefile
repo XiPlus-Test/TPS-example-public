@@ -9,9 +9,6 @@ import-pB:
 import-pC:
 	cmsImportTask ./pC/ -u $(if $(s), , --no-statement)
 
-import-pD:
-	cmsImportTask ./pD/ -u $(if $(s), , --no-statement)
-
 # NEWPROBLEM
 
 merge-pdfs: pA/attachments/problems.pdf
