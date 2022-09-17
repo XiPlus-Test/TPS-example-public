@@ -1,9 +1,9 @@
 # TPS範例題目
 
 ## Quick Links
-[problems.pdf](pA/attachments/problems.pdf)
-
-## Quick Links
+* [題本](https://xiplus-test.github.io/TPS-example-public/pA/attachments/problems.pdf) - [View in GitHub](pA/attachments/problems.pdf)
+* [記分板](https://xiplus-test.github.io/TPS-example-public/ranking/Ranking.html)
+* [題解](https://xiplus-test.github.io/TPS-example-public/detailed_solutions.pdf) - [View in GitHub](detailed_solutions.pdf)
 
 | problem | statement | gen | validator | solution | tests | config |
 | --- | --- | --- | --- | --- | --- | --- |
