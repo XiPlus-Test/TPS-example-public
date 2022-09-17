@@ -5,6 +5,4 @@ exclude:
   - pB/tests/
   - pC/scripts/
   - pC/tests/
-  - pD/scripts/
-  - pD/tests/
 # NEWPROBLEM
