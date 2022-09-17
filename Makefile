@@ -12,7 +12,7 @@ import-pC:
 import-pD:
 	cmsImportTask ./pD/ -u $(if $(s), , --no-statement)
 
-# NEWPROBELM
+# NEWPROBLEM
 
 merge-pdfs: pA/attachments/problems.pdf
 
