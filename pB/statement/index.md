@@ -2,11 +2,9 @@
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=12cm]{img.jpg}
+\includegraphics[width=12cm]{ cover2.png  }
 \caption{高捷少女們換上萬聖節的偶像裝扮，出自《前進吧！高捷少女》Facebook粉絲專頁}
 \end{figure}
-
-<!-- {img2.jpg} -->
 
 8
 
