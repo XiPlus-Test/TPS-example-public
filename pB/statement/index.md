@@ -6,7 +6,7 @@
 \caption{高捷少女們換上萬聖節的偶像裝扮，出自《前進吧！高捷少女》Facebook粉絲專頁}
 \end{figure}
 
-<!-- {Screenshot (118).png} -->
+<!-- {img2.jpg} -->
 
 8
 
