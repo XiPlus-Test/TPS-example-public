@@ -26,7 +26,7 @@ on:
 
 jobs:
   run:
-    uses: XiPlus-Test/tps-actions-test/.github/workflows/build-pdf.yml@main
+    uses: XiPlus-Test/tps-actions-test/.github/workflows/build-pdf.yml@docker
     with:
       problems: ${{ inputs.problems }}
       merge: ${{ inputs.merge && fromJson(inputs.merge) || false }}
