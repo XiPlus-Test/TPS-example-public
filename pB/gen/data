@@ -1,6 +1,6 @@
 @subtask samples
 manual sample-01.in
-gen 1 piexq
+gen 1 piexq 1
 
 @subtask small
 gen 1 pewfw
